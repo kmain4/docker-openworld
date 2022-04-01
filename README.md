@@ -10,7 +10,7 @@ Clone this repository for quick usage.
 
 To configure automatic mod list management from steam workshop, create a mods.txt file and poulate your mod ID's line by line. An example of this file will be provided in this document.
 
-```mods.txt
+```txt
 2773943594
 2707120862
 ```
