@@ -1,6 +1,6 @@
 # docker-openworld
 
-This project creates a docker container to run (Open World)[https://github.com/TastyLollipop/OpenWorld], a Rimworld multiplayer mod as a server.
+This project creates a docker container to run [Open World](https://github.com/TastyLollipop/OpenWorld), a Rimworld multiplayer mod as a server.
 
 ## Usage
 
