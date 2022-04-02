@@ -27,4 +27,4 @@ if [ -f '/openworld/mods.txt' ]; then
     done
 fi
 
-openworld /root/.dotnet/dotnet /openworld/Open\ World\ Server.dll
+/root/.dotnet/dotnet /openworld/Open\ World\ Server.dll
