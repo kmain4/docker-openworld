@@ -12,6 +12,7 @@ do
         +login anonymous \
         +workshop_download_item 294100 $mod_id \
         +quit
+    rm -f /openworld/Mods/$mod_id || :
     cp -paxv /tmp/mods/steamapps/workshop/content/294100/$mod_id /openworld/Mods/
 done
 
@@ -23,6 +24,7 @@ if [ -f '/openworld/mods.txt' ]; then
             +login anonymous \
             +workshop_download_item 294100 $mod_id \
             +quit
+        rm -f /openworld/Mods/$mod_id || :
         cp -paxv /tmp/mods/steamapps/workshop/content/294100/$mod_id /openworld/Mods/
     done
 fi
