@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-ARG OPENWORLD_RELEASE_VERSION='1.2.5'
+ARG OPENWORLD_RELEASE_VERSION='1.3.1'
 ARG DEBIAN_FRONTEND='noninteractive'
 RUN apt update -yq && \
     apt install -y --no-install-recommends \
