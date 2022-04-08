@@ -46,4 +46,4 @@ if [ -f '/openworld/mod_whitelist.txt' ]; then
     done
 fi
 
-screen -S openworld -d -m /root/.dotnet/dotnet /openworld/Open\ World\ Server.dll
+screen -S openworld /root/.dotnet/dotnet /openworld/Open\ World\ Server.dll
