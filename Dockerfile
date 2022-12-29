@@ -7,6 +7,7 @@ apt-get -y upgrade \
 apt-get -y dist-upgrade \
 apt-get -y install screen \
 apt-get -y install wget \
+apt-get -y install curl \
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb \
 dpkg -i ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb \
 rm libssl1.1_1.1.0g-2ubuntu4_amd64.deb \
