@@ -7,7 +7,7 @@ apt install -y --no-install-recommends \
         lib32gcc1 \
         unzip \
         ca-certificates \
-        libicu66 \
+        libicu66
 apt-get -y install screen
 apt -y install wget
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
