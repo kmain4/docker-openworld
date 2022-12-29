@@ -24,13 +24,13 @@ rm dotnet-install.sh
 mkdir /openworld
 cd /openworld
 wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip
-unzip LinuxX64.zip
+unzip -O LinuxX64.zip
 cat <<EOT >> /openworld/run.sh
 #!/bin/bash
 export DOTNET_ROOT=$HOME/.dotnet
 /openworld/Open\ World\ Server
 EOT
-rm /openworld/LinuxX64.zip
+rm LinuxX64.zip
 chmod +x /openworld/run.sh
 chmod +x /openworld/Open\ World\ Server
 
