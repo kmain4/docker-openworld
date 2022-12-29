@@ -1,10 +1,9 @@
 #!/bin/bash
 
-mkdir -p /tmp/mods
-mkdir -p /tmp/whitelisted_mods
 
 # Required mods
 if [ -f '/openworld/mods.txt' ]; then
+    mkdir /tmp/mods
     for mod_id in `cat /openworld/mods.txt`;
     do
         /steamcmd/steamcmd.sh \
@@ -18,6 +17,7 @@ fi
 
 # Whitelisted mods
 if [ -f '/openworld/mod_whitelist.txt' ]; then
+    mkdir /tmp/whitelisted_mods
     for mod_id in `cat /openworld/mod_whitelist.txt`;
     do
         /steamcmd/steamcmd.sh \
