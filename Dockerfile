@@ -1,8 +1,8 @@
 FROM ubuntu:22.04
 
-ARG OPENWORLD_RELEASE_VERSION='1.4.2'
 ARG DEBIAN_FRONTEND='noninteractive'
-RUN apt-get -y update \
+RUN cd /tmp \
+apt-get -y update \
 apt-get -y upgrade \
 apt-get -y dist-upgrade \
 apt-get -y install screen wget
@@ -14,7 +14,6 @@ chmod +x dotnet-install.sh \
 ./dotnet-install.sh -c 3.1 \
 rm dotnet-install.sh \
 mkdir /openworld \
-cd /openworld \
 wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip \
 unzip LinuxX64.zip –d /openworld
 chmod +x /openworld/run.sh \
