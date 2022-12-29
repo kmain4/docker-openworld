@@ -26,7 +26,6 @@ unzip LinuxX64.zip –d /openworld \
 chmod +x /openworld/run.sh \
 chmod +x /openworld/Open\ World\ Server \
 mkdir /steamcmd \
-cd /steamcmd \
 wget steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz \
 tar -zxvf steamcmd_linux.tar.gz /steamcmd \
 /steamcmd/steamcmd.sh +quit \
