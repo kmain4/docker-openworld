@@ -16,7 +16,7 @@ chmod +x dotnet-install.sh \
 rm dotnet-install.sh \
 mkdir /openworld \
 wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip \
-unzip LinuxX64.zip –d /openworld
+unzip LinuxX64.zip –d /openworld \
 chmod +x /openworld/run.sh \
 chmod +x /openworld/Open\ World\ Server \
 rm -rf OpenWorld-Ubuntu-Install-Script
