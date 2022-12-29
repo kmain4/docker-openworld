@@ -15,11 +15,13 @@ chmod +x dotnet-install.sh
 ./dotnet-install.sh -c 3.1
 rm dotnet-install.sh
 mkdir /openworld
+cd /openworld
 wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip
-unzip LinuxX64.zip –d /openworld
+unzip LinuxX64.zip
 chmod +x /openworld/run.sh
 chmod +x /openworld/Open\ World\ Server
 mkdir /steamcmd
+cd /tmp
 wget steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 tar -zxvf steamcmd_linux.tar.gz /steamcmd
 /steamcmd/steamcmd.sh +quit
