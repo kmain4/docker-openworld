@@ -25,16 +25,11 @@ wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip \
 unzip LinuxX64.zip –d /openworld \
 chmod +x /openworld/run.sh \
 chmod +x /openworld/Open\ World\ Server \
-rm -rf OpenWorld-Ubuntu-Install-Script
-
-RUN mkdir -p /steamcmd && \
-    cd /steamcmd && \
-    curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
-RUN /steamcmd/steamcmd.sh +quit
-
-RUN curl -L https://dot.net/v1/dotnet-install.sh --output /tmp/dotnet.sh && \
-    bash /tmp/dotnet.sh -c 6.0 && \
-    rm /tmp/dotnet.sh
+rm -rf OpenWorld-Ubuntu-Install-Script \
+mkdir -p /steamcmd && \
+cd /steamcmd && \
+curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf - \
+/steamcmd/steamcmd.sh +quit \
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
