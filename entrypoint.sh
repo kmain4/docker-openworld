@@ -3,10 +3,8 @@ apt-get -y -qq update
 apt-get -y -qq upgrade
 apt-get -y -qq dist-upgrade
 apt-get -y -qq install curl
-apt-get -y -qq install lib32gcc1
 apt-get -y -qq install unzip
 apt-get -y -qq install ca-certificates
-apt-get -y -qq install libicu66
 apt-get -y -qq install screen
 apt-get -y -qq install wget
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
