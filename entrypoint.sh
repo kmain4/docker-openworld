@@ -23,7 +23,7 @@ chmod +x /openworld/Open\ World\ Server
 mkdir /steamcmd
 cd /tmp
 wget steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
-tar -zxvf steamcmd_linux.tar.gz /steamcmd
+tar -xf steamcmd_linux.tar.gz -C /steamcmd
 /steamcmd/steamcmd.sh +quit
 
 # Required mods
