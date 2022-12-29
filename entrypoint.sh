@@ -10,6 +10,7 @@ apt-get -y -qq install wget
 apt-get -y -qq install lib32gcc-s1
 apt-get -y -qq install software-properties-common
 dpkg --add-architecture i386
+apt-get -y -qq update
 apt-get -y -qq install steamcmd
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 dpkg -i ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb
