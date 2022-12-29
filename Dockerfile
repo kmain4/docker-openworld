@@ -1,6 +1,4 @@
 FROM ubuntu:22.04
-
-ARG DEBIAN_FRONTEND='noninteractive'
 RUN cd /tmp \
 apt install -y --no-install-recommends \
         curl \
