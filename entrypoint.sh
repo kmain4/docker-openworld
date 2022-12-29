@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /openworld
 
 # Required mods
 if [ -f '/openworld/mods.txt' ]; then
@@ -29,4 +30,5 @@ if [ -f '/openworld/mod_whitelist.txt' ]; then
     done
 fi
 
+which screen
 screen -S /openworld/run.sh
