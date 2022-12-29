@@ -1,15 +1,25 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
-ARG OPENWORLD_RELEASE_VERSION='1.3.4'
+ARG OPENWORLD_RELEASE_VERSION='1.4.2'
 ARG DEBIAN_FRONTEND='noninteractive'
-RUN apt update -yq && \
-    apt install -y --no-install-recommends \
-        curl \
-        lib32gcc1 \
-        unzip \
-        ca-certificates \
-        libicu66 \
-        screen
+RUN apt-get -y update \
+apt-get -y upgrade \
+apt-get -y dist-upgrade \
+apt-get -y install screen wget
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb \
+dpkg -i ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb \
+rm libssl1.1_1.1.0g-2ubuntu4_amd64.deb \
+wget https://dot.net/v1/dotnet-install.sh \
+chmod +x dotnet-install.sh \
+./dotnet-install.sh -c 3.1 \
+rm dotnet-install.sh \
+mkdir /openworld \
+cd /openworld \
+wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip \
+unzip LinuxX64.zip –d /openworld
+chmod +x /openworld/run.sh \
+chmod +x /openworld/Open\ World\ Server \
+rm -rf OpenWorld-Ubuntu-Install-Script
 
 RUN mkdir -p /steamcmd && \
     cd /steamcmd && \
@@ -19,11 +29,6 @@ RUN /steamcmd/steamcmd.sh +quit
 RUN curl -L https://dot.net/v1/dotnet-install.sh --output /tmp/dotnet.sh && \
     bash /tmp/dotnet.sh -c 6.0 && \
     rm /tmp/dotnet.sh
-
-RUN curl -L https://github.com/TastyLollipop/OpenWorld/releases/download/${OPENWORLD_RELEASE_VERSION}/LinuxX64.zip --silent --output /openworld.zip
-RUN mkdir -p /openworld
-
-COPY mods.base.txt /tmp/mods.base.txt
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
