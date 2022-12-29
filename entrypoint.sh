@@ -24,7 +24,7 @@ mkdir /steamcmd
 cd /tmp
 wget steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 tar -xf steamcmd_linux.tar.gz -C /steamcmd
-/steamcmd/steamcmd.sh +quit
+#/steamcmd/steamcmd.sh +quit
 
 # Required mods
 if [ -f '/openworld/mods.txt' ]; then
