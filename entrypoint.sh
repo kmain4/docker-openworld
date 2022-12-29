@@ -1,15 +1,14 @@
 #!/bin/bash
-apt-get -y update
-apt-get -y upgrade
-apt-get -y dist-upgrade
-apt install -y --no-install-recommends \
-        curl \
-        lib32gcc1 \
-        unzip \
-        ca-certificates \
-        libicu66
-apt-get -y install screen
-apt -y install wget
+apt-get -y -qq update
+apt-get -y -qq upgrade
+apt-get -y -qq dist-upgrade
+apt-get -y -qq install curl
+apt-get -y -qq install lib32gcc1
+apt-get -y -qq install unzip
+apt-get -y -qq install ca-certificates
+apt-get -y -qq install libicu66
+apt-get -y -qq install screen
+apt-get -y -qq install wget
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 dpkg -i ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 rm libssl1.1_1.1.0g-2ubuntu4_amd64.deb
