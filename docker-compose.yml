@@ -1,11 +1,10 @@
 version: '3'
 services:
   openworld:
-    image: ghcr.io/f0rkz/docker-openworld:latest
+    image: kmain4/docker-openworld:latest
     tty: true
     stdin_open: true
     volumes:
       - ./openworld:/openworld
-      - ./mods.txt:/openworld/mods.txt
     ports:
       - 25555:25555
