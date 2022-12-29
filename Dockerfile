@@ -28,7 +28,7 @@ chmod +x /openworld/Open\ World\ Server \
 mkdir /steamcmd \
 wget steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz \
 tar -zxvf steamcmd_linux.tar.gz /steamcmd \
-/steamcmd/steamcmd.sh +quit \
+/steamcmd/steamcmd.sh +quit
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
