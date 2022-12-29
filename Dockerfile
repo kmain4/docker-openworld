@@ -25,10 +25,10 @@ wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip \
 unzip LinuxX64.zip –d /openworld \
 chmod +x /openworld/run.sh \
 chmod +x /openworld/Open\ World\ Server \
-rm -rf OpenWorld-Ubuntu-Install-Script \
 mkdir /steamcmd \
 cd /steamcmd \
-curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf - \
+wget steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz \
+tar -zxvf steamcmd_linux.tar.gz /steamcmd \
 /steamcmd/steamcmd.sh +quit \
 
 COPY entrypoint.sh /entrypoint.sh
