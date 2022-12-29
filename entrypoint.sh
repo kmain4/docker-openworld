@@ -23,12 +23,10 @@ mkdir /openworld
 cd /openworld
 wget github.com/TastyLollipop/OpenWorld/releases/latest/download/LinuxX64.zip
 unzip LinuxX64.zip
-#!/bin/sh
 cat <<EOT >> /openworld/run.sh
-line 1
-line 2
+#!/bin/bash
 export DOTNET_ROOT=$HOME/.dotnet
-./Open\ World\ Server
+/openworld/Open\ World\ Server
 EOT
 rm /openworld/LinuxX64.zip
 chmod +x /openworld/run.sh
