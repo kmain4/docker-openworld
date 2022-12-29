@@ -4,11 +4,11 @@ This project creates a docker container to run [Open World](https://github.com/T
 
 ## Usage
 
-Clone this repository for quick usage.
+Clone this repository for quick usage with `docker-compose up` command.
 
 ### Mods
 
-To configure automatic mod list management from steam workshop, create a mods.txt file and poulate your mod ID's line by line. An example of this file will be provided in this document.
+To configure automatic mod list management from steam workshop, create a mods.txt and/or mod_whitelist.txt in the mounted openworld directory and poulate your mod ID's line by line. An example of this file will be provided in this document.
 
 ```txt
 2773943594
