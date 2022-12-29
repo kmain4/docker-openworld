@@ -8,6 +8,9 @@ apt-get -y -qq install ca-certificates
 apt-get -y -qq install screen
 apt-get -y -qq install wget
 apt-get -y -qq install lib32gcc-s1
+apt-get -y -qq install software-properties-common
+dpkg --add-architecture i386
+apt-get -y -qq install steamcmd
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 dpkg -i ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 rm libssl1.1_1.1.0g-2ubuntu4_amd64.deb
@@ -29,18 +32,13 @@ EOT
 rm /openworld/LinuxX64.zip
 chmod +x /openworld/run.sh
 chmod +x /openworld/Open\ World\ Server
-mkdir /steamcmd
-cd /tmp
-wget steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
-tar -xf steamcmd_linux.tar.gz -C /steamcmd
-/steamcmd/linux32/steamcmd.sh +quit
 
 # Required mods
 if [ -f '/openworld/mods.txt' ]; then
     mkdir /tmp/mods
     for mod_id in `cat /openworld/mods.txt`;
     do
-        /steamcmd/linux32/steamcmd.sh \
+        /usr/games/steamcmd \
             +force_install_dir /tmp/mods \
             +login anonymous \
             +workshop_download_item 294100 $mod_id \
@@ -54,7 +52,7 @@ if [ -f '/openworld/mod_whitelist.txt' ]; then
     mkdir /tmp/whitelisted_mods
     for mod_id in `cat /openworld/mod_whitelist.txt`;
     do
-        /steamcmd/linux32/steamcmd.sh \
+        /usr/games/steamcmd \
             +force_install_dir /tmp/mods \
             +login anonymous \
             +workshop_download_item 294100 $mod_id \
@@ -63,4 +61,4 @@ if [ -f '/openworld/mod_whitelist.txt' ]; then
     done
 fi
 
-#screen -S /openworld/run.sh
+screen -S /openworld/run.sh
