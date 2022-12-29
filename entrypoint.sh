@@ -62,4 +62,4 @@ if [ -f '/openworld/mod_whitelist.txt' ]; then
     done
 fi
 
-screen -S /openworld/run.sh
+screen -S rimworld /openworld/run.sh
